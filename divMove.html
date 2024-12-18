@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid blue; /*DIV사각형의 둘레 두께를 1px로 지정, 둘레의 색깔을 파란색으로 지정*/
+            width: 100px;   /*DIV 사각형의 세로길이를 100px로 설정*/
+            height: 100px;  /*DIV 사각형의 가로길이를 100px로 설정*/
+            text-align: center;
+            position: absolute; /*left, top값으로 위치 설정을 하기 위해서*/
+            left: 300px;
+            top: 300px;
+        }
+    </style>
+    <script>
+        //================================================================================================
+        //Global Cariable Zone
+        //================================================================================================        
+        //div tag 좌표 (left, top)
+        let divLeft = 300;
+        let divTOP = 300;
+        //================================================================================================
+        // btnRight click event handler
+        // 얖 xormfmf dhfmsWhrdmfh 50px만큼 이동시킨다.
+        function moveRight(){
+            let div = document.querySelector("div");
+            //div.style.left += "50px"; <== (X)
+            divLeft += 50;
+            div.style.left = divLeft + "px";
+        }
+        function moveLeft(){
+            let div = document.querySelector("div");
+            divLeft -= 50;
+            div.style.left = divLeft + "px";
+        }
+        //-------------------------------------------------------------------------------------------------
+        function gid(id) { return document.getElementById(id);}
+        //-------------------------------------------------------------------------------------------------
+        window.onload = function(){
+            gid("btnRight").addEventListener("click", moveRight);
+            gid("btnLeft").addEventListener("click", moveLeft);
+        }
+    </script>
+</head>
+<body>
+    <h1>DIV Move Control</h1>
+    <hr>
+    
+    <button id = "btnLeft">Left</button>
+    <button id = "btnRight">Right</button>
+    <hr>
+    <div>Javascript</div>
+</body>
+</html>

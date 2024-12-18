@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- 문서의 문자 인코딩을 UTF-8로 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹을 위해 뷰포트 설정 -->
+    <title>DIV Moving Control</title> <!-- 문서의 제목 설정 -->
+    <style>
+        /* 버튼을 감싸는 컨테이너의 스타일 */
+        .control-buttons {
+            margin-top: 10px; /* 위쪽 마진을 200px로 설정 */
+        }        
+        
+        /* 이동할 div의 스타일 */
+        #movableDiv {
+            width: 150px; /* 가로 크기 설정 */
+            height: 150px; /* 세로 크기 설정 */
+            position: absolute; /* 위치를 절대값으로 지정하여 자유롭게 이동 가능 */
+            border: 2px solid blue; /* 2px의 검은 테두리 설정 */
+            text-align: center; /* 텍스트를 수평 가운데 정렬 */
+            line-height: 100px; /* 텍스트를 수직 가운데 정렬 */
+            left: 300px; /* 위치를 좌측에서 100px 떨어진 곳에 존제 */
+            top: 300px   /* 위치를 상단에서 400px 떨어진 곳에 존재 */
+        }
+
+
+    </style>
+    <script>
+        // 이동 단위를 설정하는 상수
+        const MOVE_STEP = 20; // 한 번 클릭할 때마다 20px 이동
+
+        // div를 왼쪽으로 이동시키는 함수
+        function moveLeft() {
+            const div = document.getElementById("movableDiv"); // 이동할 div 요소 가져오기
+            let left = parseInt(window.getComputedStyle(div).left); // 현재 left 값을 숫자로 변환하여 가져오기
+            div.style.left = `${left - MOVE_STEP}px`; // left 값을 MOVE_STEP만큼 줄여서 왼쪽으로 이동
+        }
+
+        // div를 오른쪽으로 이동시키는 함수
+        function moveRight() {
+            const div = document.getElementById("movableDiv"); // 이동할 div 요소 가져오기
+            let left = parseInt(window.getComputedStyle(div).left); // 현재 left 값을 숫자로 변환하여 가져오기
+            div.style.left = `${left + MOVE_STEP}px`; // left 값을 MOVE_STEP만큼 늘려서 오른쪽으로 이동
+        }
+    </script>
+</head>
+<body>
+
+    <h1>DIV Moving Control</h1> <!-- 제목 출력 -->
+    <hr>
+
+    <!-- 컨트롤 버튼을 감싸는 영역 -->
+    <div class="control-buttons">
+        <button onclick="moveLeft()">Left</button> <!-- Left 버튼 클릭 시 moveLeft() 함수 호출 -->
+        <button onclick="moveRight()">Right</button> <!-- Right 버튼 클릭 시 moveRight() 함수 호출 -->
+    </div>
+
+    <!-- 이동할 div 요소 -->
+    <div id="movableDiv">150px, 150px</div>
+
+
+</body>
+</html>
