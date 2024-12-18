@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop KIOSK</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 외부 CSS 파일 연결 -->
+</head>
+<body>
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <!-- 메뉴 영역 -->
+        <div class="menu-area" id="menu">
+            <h2>Menu</h2>
+            <!-- 메뉴 항목 -->
+            <div class="menu-item" draggable="true" data-name="Coffee" data-price="5">Coffee - $5</div>
+            <div class="menu-item" draggable="true" data-name="Tea" data-price="3">Tea - $3</div>
+            <div class="menu-item" draggable="true" data-name="Sandwich" data-price="7">Sandwich - $7</div>
+        </div>
+
+        <!-- 장바구니 영역 -->
+        <div class="cart-area" id="cart">
+            <h2>Cart</h2>
+            <!-- 드롭된 메뉴가 여기에 추가됩니다 -->
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- 외부 JavaScript 파일 연결 -->
+</body>
+</html>

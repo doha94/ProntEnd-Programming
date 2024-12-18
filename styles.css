@@ -1,0 +1,29 @@
+/* 전체 레이아웃 스타일 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* 메뉴 영역 스타일 */
+.menu-area, .cart-area {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    min-height: 300px;
+}
+
+/* 개별 메뉴 아이템 스타일 */
+.menu-item {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: grab;
+    background-color: #f9f9f9;
+}
+/* 드래그 오버 시 장바구니 강조 효과 */
+.cart-area.drag-over {
+    background-color: #e0ffe0;
+}
