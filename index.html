@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키오스크</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 전체 컨테이너 -->
+    <div class="container">
+        <!-- 카페 제목 -->
+        <h1 class="title">DITJ 카페</h1>
+
+        <!-- 카테고리 버튼 영역 -->
+        <div class="categories">
+            <button class="category-btn" data-category="all">전체</button>
+            <button class="category-btn" data-category="drink">음료</button>
+            <button class="category-btn" data-category="food">음식</button>
+        </div>
+
+        <!-- 메뉴 영역 -->
+        <div class="menu-area" id="menu-area">
+            <!-- 동적으로 메뉴 아이템이 추가됨 -->
+        </div>
+
+        <!-- 설명 및 장바구니 영역 -->
+        <div class="bottom-area">
+            <!-- 메뉴 설명 영역 -->
+            <div class="description-area">
+                <h2>메뉴 설명</h2>
+                <p id="description">메뉴를 클릭하거나 드래그하면 상세 설명이 여기에 표시됩니다.</p>
+            </div>
+
+            <!-- 장바구니 영역 -->
+            <div class="cart-area" id="cart-area" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>장바구니</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    총합: ₩<span id="total-price">0</span>
+                </div>
+                <button id="checkout-button">결제하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 관리자 버튼 -->
+    <button class="admin-btn" id="admin-btn">관리자</button>
+
+    <!-- 로그인 모달 -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>관리자 로그인</h2>
+            <input type="password" id="password-input" placeholder="비밀번호를 입력하세요">
+            <button id="login-button">로그인</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

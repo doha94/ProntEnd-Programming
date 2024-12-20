@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f2ec;
+    color: #5d4037;
+    margin: 0;
+    padding: 20px;
+}
+
+.admin-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #8d6e63;
+}
+
+.admin-section {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #d7ccc8;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #a1887f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8d6e63;
+}
+
+#menu-list {
+    margin-top: 20px;
+}

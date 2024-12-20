@@ -1,29 +1,146 @@
-/* 전체 레이아웃 스타일 */
+/* 전체 레이아웃 및 배경색 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7e8d2; /* 연한 갈색 배경 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 컨테이너 및 제목 스타일 */
 .container {
-    display: flex;
-    justify-content: space-between;
     margin: 20px;
 }
 
-/* 메뉴 영역 스타일 */
-.menu-area, .cart-area {
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    width: 45%;
-    min-height: 300px;
+.title {
+    text-align: center;
+    color: #4a3c31; /* 짙은 갈색 텍스트 */
 }
 
-/* 개별 메뉴 아이템 스타일 */
-.menu-item {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #000;
-    border-radius: 5px;
-    cursor: grab;
-    background-color: #f9f9f9;
+/* 카테고리 버튼 스타일 */
+.categories {
+    text-align: center;
+    margin-bottom: 20px;
 }
-/* 드래그 오버 시 장바구니 강조 효과 */
-.cart-area.drag-over {
-    background-color: #e0ffe0;
+
+.category-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d4a373;
+    color: white;
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background-color: #b58d5d;
+}
+
+/* 메뉴 영역 스타일 */
+.menu-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    border: 2px solid #8c644c;
+    padding: 20px;
+    background-color: #fff8e6;
+    border-radius: 10px;
+}
+
+/* 메뉴 아이템 스타일 */
+.menu-item {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #8c644c;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-item:active {
+    background-color: #f2e4d6;
+}
+
+/* 장바구니 스타일 */
+.cart-area {
+    border: 2px solid #8c644c;
+    border-radius: 10px;
+    background-color: #fff8e6;
+    padding: 20px;
+}
+
+/* 관리자 버튼 스타일 */
+.admin-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #b58d5d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-btn:hover {
+    background-color: #8c644c;
+}
+
+/* 로그인 모달 스타일 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* 수량 버튼 스타일 */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.quantity-btn {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: #d4a373;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 20px;
+}
+
+.quantity-btn:hover {
+    background-color: #b58d5d;
 }
