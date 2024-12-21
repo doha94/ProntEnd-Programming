@@ -53,3 +53,21 @@ button:hover {
 #menu-list {
     margin-top: 20px;
 }
+
+.back-btn {
+    background-color: #a1887f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 80px;
+    display: block;
+    text-align: center;
+    width: 200px;
+    margin-left: 86%;
+}
+
+.back-btn:hover {
+    background-color: #8d6e63;
+}
